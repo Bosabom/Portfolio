@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
     font-size: 100%;
@@ -9,7 +13,7 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
 }
@@ -32,6 +36,71 @@ li a:hover {
     color: white;
 }
 
-li a:active {
+li a:visited {
     background-color: green;
+}
+
+.main-grid-container {
+    display: grid;
+    grid-template-areas:
+        'about photo'
+        'technologies tools'
+        'project1 project2'
+        'project3 project4'
+        'contacts contactForm';
+    border: 3px solid black;
+    gap: 5px;
+}
+
+.main-grid-container>div {
+    min-height: 700px;
+    border: 2px dashed red;
+}
+
+#header {
+    grid-area: header;
+}
+
+#about {
+    grid-area: about;
+}
+
+#photo {
+    grid-area: photo;
+}
+
+#technologies {
+    grid-area: technologies;
+}
+
+#tools {
+    grid-area: tools;
+}
+
+#project-1 {
+    grid-area: project1;
+}
+
+#project-2 {
+    grid-area: project2;
+}
+
+#project-3 {
+    grid-area: project3;
+}
+
+#project-4 {
+    grid-area: project4;
+}
+
+#contacts {
+    grid-area: contacts;
+}
+
+#contact-form {
+    grid-area: contactForm;
+}
+
+.footer {
+    grid-area: footer;
 }
