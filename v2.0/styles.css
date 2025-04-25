@@ -36,11 +36,7 @@ li a:hover {
     color: white;
 }
 
-li a:visited {
-    background-color: green;
-}
-
-.main-grid-container {
+.grid-container {
     display: grid;
     grid-template-areas:
         'about photo'
@@ -52,9 +48,10 @@ li a:visited {
     gap: 5px;
 }
 
-.main-grid-container>div {
+.grid-container-items {
     min-height: 700px;
     border: 2px dashed red;
+
 }
 
 #header {
@@ -63,6 +60,7 @@ li a:visited {
 
 #about {
     grid-area: about;
+    position: relative;
 }
 
 #photo {
@@ -71,26 +69,68 @@ li a:visited {
 
 #technologies {
     grid-area: technologies;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #tools {
     grid-area: tools;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #project-1 {
     grid-area: project1;
+
+    /*Subgrid for content in main grid item*/
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 0.75rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
 }
 
 #project-2 {
     grid-area: project2;
+
+    /*Subgrid for content in main grid item*/
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 0.75rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
 }
 
 #project-3 {
     grid-area: project3;
+
+    /*Subgrid for content in main grid item*/
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 0.75rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
 }
 
 #project-4 {
     grid-area: project4;
+
+    /*Subgrid for content in main grid item*/
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    /* gap: 0.75rem; */
+    background: #fff;
+    border-radius: 12px;
+    /* padding: 1rem; */
+    text-align: center;
 }
 
 #contacts {
@@ -103,4 +143,64 @@ li a:visited {
 
 .footer {
     grid-area: footer;
+}
+
+.grid-item-header {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.github-link {
+    width: 15vw;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    color: black;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.github-link a {
+    color: black;
+    text-decoration-line: none;
+}
+
+.github-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.github-link:hover a {
+    color: white;
+}
+
+#hotel-management-system-img {
+    width: 70%;
+    margin: auto;
+}
+
+#marketplace-img {
+    width: 70%;
+    margin: auto;
+}
+
+#kafka-task-img {
+    width: 70%;
+    margin: auto;
+}
+
+.project-image {
+    border: 2px solid orange;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    align-self: center;
+    justify-self: center;
+    border-radius: 8px;
 }
