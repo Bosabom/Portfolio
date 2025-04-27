@@ -67,8 +67,6 @@ body {
 }
 
 .about-me-text {
-    /* display: block; */
-    /* margin-top: 20%; */
     color: black;
     font-size: 1.3rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -78,7 +76,11 @@ body {
 
 #photo {
     grid-area: photo;
-    background-color: rgb(200, 68, 204);
+    /*Need for centering image vertically and horizontally*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 #technologies {
@@ -101,37 +103,27 @@ body {
 
 #project-1 {
     grid-area: project1;
-
     /*Subgrid for content in main grid item*/
     display: grid;
     grid-template-rows: auto auto auto auto;
-    /* gap: 0.75rem; */
     background-color: rgb(136, 191, 196);
-    /* padding: 1rem; */
     text-align: center;
-
 }
 
 #project-2 {
     grid-area: project2;
-
     /*Subgrid for content in main grid item*/
     display: grid;
     grid-template-rows: auto auto auto auto;
     gap: 0.75rem;
     background-color: rgb(222, 237, 250);
-    /* padding: 1rem; */
     text-align: center;
 }
 
 #project-3 {
     grid-area: project3;
-
-    /*Subgrid for content in main grid item*/
     display: grid;
     grid-template-rows: auto auto auto auto;
-    /* gap: 0.75rem;
-    padding: 1rem; */
     text-align: center;
     background-color: rgb(198, 213, 124);
 }
@@ -143,7 +135,6 @@ body {
     grid-template-rows: auto auto auto auto;
     gap: 0.75rem;
     background-color: rgb(236, 169, 179);
-    /* padding: 1rem; */
     text-align: center;
 }
 
@@ -172,7 +163,7 @@ body {
 }
 
 .github-link {
-    width: 15vw;
+    min-width: 20%;
     border: 1px solid black;
     border-radius: 8px;
     padding: 20px;
@@ -200,9 +191,8 @@ body {
 #my-photo {
     width: 100%;
     height: auto;
-
-    border: 2px solid orange;
-    border-radius: 50%;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 #hotel-management-system-img {
@@ -233,7 +223,6 @@ body {
 .contact-list {
     list-style-type: none;
     padding: 20px;
-    /* background-color: #3399ff; */
     text-align: center;
 }
 
@@ -279,8 +268,31 @@ input[type=submit]:hover {
     font-size: 1.5rem;
 }
 
-.clearfix:after {
+/*TODO: add more media-queris for different devices */
+@media screen and (orientation: portrait),
+(width <=768px) {
+    .grid-container {
+        grid-template-areas:
+            'photo'
+            'about'
+            'technologies'
+            'tools'
+            'project1'
+            'project2'
+            'project3'
+            'project4'
+            'contacts'
+            'contactForm';
+    }
+
+    #navbar li {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* .clearfix:after {
     content: "";
     display: table;
     clear: both;
-}
+} */
