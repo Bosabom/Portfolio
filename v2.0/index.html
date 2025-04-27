@@ -18,14 +18,16 @@
       <li><a href="#project-1">Projects</a></li>
       <li><a href="#contacts">Contacts</a></li>
     </ul>
-    <div class="header">
-      <h2>Hello, my name is Mykyta!</h2>
-    </div>
 
     <div class="grid-container">
+      <div id="photo" class="grid-container-items">
+        <img id="my-photo" src="/v2.0/images/photo.jpg" alt="My Photo" />
+      </div>
+
       <div id="about" class="grid-container-items">
-        <h3 class="grid-item-header">About me</h3>
-        <div class="text-centered">
+        <h1 id="main-header">Hello, My Name is Mykyta!</h1>
+        <div class="about-me-text">
+          <h3 class="grid-item-header">About me</h3>
           I am a .NET engineer with 3+ years of commercial experience in
           back-end development (C# and .NET Core). I can also work with
           relational (PostgreSQL, MySQL, MS SQL Server) and non-relational
@@ -33,21 +35,16 @@
           experience with React and HTML, CSS, JavaScript, TypeScript. So I'm
           ready to learn new technologies and improve my existing skills. In
           addition, I have experience working in both big and small teams
-          following Agile/Scrum methodologies. I speak the following languages:
-          Ukrainian, Russian, English. Hobbys: Sports (football, basketball,
-          volleyball, table tennis, taekwondo), training in gym, video games,
-          solving puzzles, listening to music, travelling.
+          following Agile/Scrum methodologies.
+          <br />
+          I speak the following languages: Ukrainian, Russian, English. Hobbys:
+          Sports (football, basketball, volleyball, table tennis, taekwondo),
+          training in gym, video games, solving puzzles, listening to music,
+          travelling.
         </div>
       </div>
-      <div id="photo" class="grid-container-items">
-        <img
-          class="project-image"
-          src="/v2.0/images/my-photo.jpg"
-          alt="My Photo"
-        />
-      </div>
 
-      <div class="grid-container-items">
+      <div class="grid-container-items technologies-grid-item">
         <h3 class="grid-item-header">Technologies</h3>
         <div id="technologies">
           <br />
@@ -226,7 +223,7 @@
           />
         </div>
       </div>
-      <div class="grid-container-items">
+      <div class="grid-container-items technologies-grid-item">
         <h3 class="grid-item-header">Tools</h3>
         <div id="tools">
           <br />
@@ -360,7 +357,7 @@
           are occupied/free, and if occupied, for how many days. You can also
           make a report for a specific day of the hotel's work. Tech-stack: C#,
           ASP.NET MVC, EF Core, LINQ, Web API, Razor Pages, Bootstrap,
-          AutoMapper, Moq, Postman
+          AutoMapper, Moq, Postman.
         </div>
         <div class="github-link">
           <i class="devicon-github-original"></i>
@@ -420,7 +417,7 @@
       <div id="project-4" class="grid-container-items">
         <h3 class="grid-item-header">15 puzzle-game</h3>
         <img
-          id="15-puzzle-img"
+          id="fifteen-puzzle-img"
           class="project-image"
           src="/v2.0/images/15puzle.jpg"
           alt="15 Puzzle game"
@@ -450,19 +447,50 @@
           </a>
         </div>
       </div>
+
       <div id="contacts" class="grid-container-items">
         <h3 class="grid-item-header">Contacts</h3>
-        If you need to contact me, you can do so in a way convenient for you. Or
-        use this form<br />
+        <ul class="contact-list">
+          <li>+123 456 789</li>
+          <li>test@test.com</li>
+          <li>
+            <a href="https://github.com/Bosabom" target="_blank">Github</a>
+          </li>
+        </ul>
       </div>
 
       <div id="contact-form" class="grid-container-items">
         <h3 class="grid-item-header">Form</h3>
+        <form target="_blank" action="">
+          <label for="form-name">Name</label>
+          <input
+            type="text"
+            id="form-name"
+            name="name"
+            placeholder="Your Name"
+          />
+
+          <label for="form-email">Email</label>
+          <input
+            type="email"
+            id="form-email"
+            name="e-mail"
+            placeholder="Your Email"
+          />
+
+          <label for="form-message">Message</label>
+          <input
+            type="text"
+            id="form-message"
+            name="message"
+            placeholder="Message"
+          />
+
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     </div>
 
     <div class="footer"><p>©2025 Bosabom</p></div>
-
-    <!-- <footer></footer> -->
   </body>
 </html>
